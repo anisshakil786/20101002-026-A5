@@ -1,8 +1,6 @@
 ﻿@using e_commerce.Models
-@{
-    int row = 0;
-    Layout = "~/Views/Shared/_Layoutuser.cshtml";
-}
+@{ int row = 0;
+                Layout = "~/Views/Shared/_Layoutuser.cshtml"; }
 
 
 <!-- Start All Title Box -->
@@ -40,36 +38,35 @@
                         <tbody>
                             @foreach (var q in (List<M_Product>)Session["Cart"])
                             {
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-                                            <img class="img-fluid" src="@Url.Content(q.Product_Picture)" alt="" />
-                                        </a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-                                            @q.Product_Name
-                                        </a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <b>Rs. @q.Product_Sale_Price</b>
-                                    </td>
-                                    <td class="quantity-box">
-                                        <a href="@Url.Action("Minus", "Home", new {RowNo=row})" class="btn btn-danger fa fa-minus"></a>
-                                        <b>@q.qty</b>
-                                        <a href="@Url.Action("Plus", "Home", new {RowNo=row})" class="btn btn-danger fa fa-plus"></a>
-                                    </td>
-                                    <td class="total-pr">
-                                        <b>Rs.@(int.Parse(q.qty.ToString()) * int.Parse(q.Product_Sale_Price.ToString()))</b>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="@Url.Action("trash", "Home", new {RowNo=row})">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                row++;
-                             }
+                <tr>
+                    <td class="thumbnail-img">
+                        <a href="#">
+                            <img class="img-fluid" src="@Url.Content(q.Product_Picture)" alt="" />
+                        </a>
+                    </td>
+                    <td class="name-pr">
+                        <a href="#">
+                            @q.Product_Name
+                        </a>
+                    </td>
+                    <td class="price-pr">
+                        <b>Rs. @q.Product_Sale_Price</b>
+                    </td>
+                    <td class="quantity-box">
+                        <a href="@Url.Action("Minus", "Home", new {RowNo=row})" class="btn btn-danger fa fa-minus"></a>
+                        <b>@q.qty</b>
+                        <a href="@Url.Action("Plus", "Home", new {RowNo=row})" class="btn btn-danger fa fa-plus"></a>
+                    </td>
+                    <td class="total-pr">
+                        <b>Rs.@(int.Parse(q.qty.ToString()) * int.Parse(q.Product_Sale_Price.ToString()))</b>
+                    </td>
+                    <td class="remove-pr">
+                        <a href="@Url.Action("trash", "Home", new {RowNo=row})">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>row++;
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -134,3 +131,89 @@
     </div>
 </div>
 <!-- End Cart -->
+<!-- Start Instagram Feed  -->
+<div class="instagram-box">
+    <div class="main-instagram owl-carousel owl-theme">
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-01.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-02.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-03.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-04.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-05.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-06.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-07.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-08.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-09.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="~/Content/user/images/instagram-img-05.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Instagram Feed  -->
