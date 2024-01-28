@@ -39,7 +39,7 @@
                         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
                             @foreach (var cat in Model.cat)
                             {
-                                <a href="@Url.Action("Shop","Home",new { id = cat.Category_Id})" class="list-group-item list-group-item-action">@cat.Category_Name <small class="text-muted">@cat.M_Product.Count</small></a>
+                                <a href="@Url.Action("Shop","Home", new { id = cat.Category_Id})" class="list-group-item list-group-item-action">@cat.Category_Name <small class="text-muted">@cat.M_Product.Count</small></a>
                             }
                         </div>
                     </div>

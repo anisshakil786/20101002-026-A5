@@ -43,20 +43,16 @@ namespace e_commerce.Controllers
                 ViewBag.Message = "Invalid credentials";
                 return View();
             }
-
-
         }
 
         public ActionResult About()
         {
-
             return View();
         }
 
 
         public ActionResult Cart()
         {
-
             return View();
         }
 

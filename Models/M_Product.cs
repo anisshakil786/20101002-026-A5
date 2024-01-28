@@ -34,6 +34,7 @@ namespace e_commerce.Models
 
         [NotMapped]
         public int qty { get; set; }
+
         public virtual M_Category M_Category { get; set; }
     }
 }
